@@ -18,7 +18,7 @@ class BruteforceDeffenderGrailsPlugin {
     def author = "Grygoriy Mykhalyuno"
     def authorEmail = "email@grygoriy.com"
     def description = '''\
-Brief summary/description of the plugin.
+plugin enables blocking user account after few attampts with incorect credentials. Preventing brute-force attacks
 '''
 
     // URL to the plugin's documentation

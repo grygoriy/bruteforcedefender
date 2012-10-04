@@ -6,6 +6,8 @@ import com.google.common.cache.LoadingCache
 
 import java.util.concurrent.TimeUnit
 import javax.annotation.PostConstruct
+import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import org.springframework.security.core.userdetails.UsernameNotFoundException
 
 class LoginAttemptCacheService {
 
@@ -63,12 +65,26 @@ class LoginAttemptCacheService {
      * @param login - username that has to be disabled
      */
     private void blockUser(String login) {
-        log.debug "blocking user: $login"
-        def user = userDetailsService.loadUserByUsername(login, false)
 
+        log.debug "blocking user: $login"
+        def user = loadUser(login)
         if (user) {
-            user.accountLocked = true;
+            def conf = SpringSecurityUtils.securityConfig
+            def accountLockedPropertyName = conf.userLookup.accountLockedPropertyName
+            user."$accountLockedPropertyName" = true;
             user.save(flush: true)
         }
+    }
+
+
+    private def loadUser(String login) {
+        def conf = SpringSecurityUtils.securityConfig
+        String userClassName = conf.userLookup.userDomainClassName
+        def dc = grailsApplication.getDomainClass(userClassName)
+        if (!dc) {
+            throw new RuntimeException("The specified user domain class '$userClassName' is not a domain class")
+        }
+        Class<?> User = dc.clazz
+        User.findWhere((conf.userLookup.usernamePropertyName): login)
     }
 }
