@@ -5,15 +5,19 @@
 
 ## Configuration
 Add to your config.groovy next lines
+```groovy
 bruteforcedeffender {
     time = 5
     allowedNumberOfAttempts = 3
 }
+```
 
 ## Logging
 to enable login add next lines in your config.groovy
-    environments {
-        development {
+```groovy
+environments {
+    development {
     debug "grails.app.services.com.grygoriy.bruteforcedeffender"
-    }
+}
+```
 
