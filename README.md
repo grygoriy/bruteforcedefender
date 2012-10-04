@@ -1,10 +1,16 @@
-## Instalation
+Brute-force Deffender Plugin Info
+================================
+
+###Desciption
+Grails plugin enables blocking user account after few attampts with incorect credentials. Preventing brute-force attacks
+
+### Instalation
 - goto https://github.com/grygoriy/bruteforcedeffender/downloads
 - dowload latest version
-- use grails install-plugin <path to file>
+- use `grails install-plugin <path to file>`
 
-## Configuration
-Add to your config.groovy next lines
+### Configuration
+Add to your `config.groovy` next lines
 ```groovy
 bruteforcedeffender {
     time = 5
@@ -12,8 +18,8 @@ bruteforcedeffender {
 }
 ```
 
-## Logging
-to enable login add next lines in your config.groovy
+### Logging
+To enable login add next lines in your `config.groovy`
 ```groovy
 environments {
     development {
