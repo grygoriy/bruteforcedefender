@@ -3,17 +3,12 @@ out
 classes
 data
 
-stacktrace.log
-
-*.class
+.settings
 *.log
-*.exe
+
 *.iml
 *.iws
 *.ipr
-*.tmproj
-.classpath
-.project
 .metadata
 .idea
 .internal
