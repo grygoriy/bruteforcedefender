@@ -1,4 +1,4 @@
-Brute-force Deffender Plugin Info
+Brute-force Defender Plugin Info
 ================================
 
 ##Desciption
@@ -6,12 +6,12 @@ Grails plugin enables blocking user account after few attampts with incorect cre
 
 ## Instalation
 ### install from prebuilded
-- goto https://github.com/grygoriy/bruteforcedeffender/downloads
+- goto https://github.com/grygoriy/bruteforcedefender/downloads
 - dowload latest version
 - use `grails install-plugin <path to file>`
 
 ### build from sources
-- clone repo `git clone https://github.com/grygoriy/bruteforcedeffender.git`
+- clone repo `git clone https://github.com/grygoriy/bruteforcedefender.git`
 - build plugin `grails package-pllugin`
 - you should see plugin zip file in plugin directory
 - use `grails install-plugin <path to file>`
@@ -19,7 +19,7 @@ Grails plugin enables blocking user account after few attampts with incorect cre
 ## Configuration
 Add to your `config.groovy` next lines
 ```groovy
-bruteforcedeffender {
+bruteforcedefender {
     time = 5
     allowedNumberOfAttempts = 3
 }
@@ -30,10 +30,12 @@ To enable login add next lines in your `config.groovy`
 ```groovy
 environments {
     development {
-    debug "grails.app.services.com.grygoriy.bruteforcedeffender"
+    debug "grails.app.services.com.grygoriy.bruteforcedefender"
 }
 ```
 
 Grygoriy Mykhalyuno
+
 www.grygoriy.com
+
 email@grygoriy.com

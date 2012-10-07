@@ -1,4 +1,4 @@
-package com.grygoriy.bruteforcedeffender
+package com.grygoriy.bruteforcedefender
 
 import org.springframework.context.ApplicationListener
 import org.springframework.security.authentication.event.AuthenticationFailureBadCredentialsEvent

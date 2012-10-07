@@ -1,4 +1,4 @@
-package com.grygoriy.bruteforcedeffender
+package com.grygoriy.bruteforcedefender
 
 import java.util.concurrent.TimeUnit
 
@@ -14,16 +14,14 @@ class LoginAttemptCacheService {
 
     def grailsApplication
 
-    def userDetailsService
-
     private LoadingCache<String, Integer> attempts
 
     private Integer allowedNumberOfAttempts
 
     @PostConstruct
     void init() {
-        allowedNumberOfAttempts = grailsApplication.config.bruteforcedeffender.allowedNumberOfAttempts
-        Integer time = grailsApplication.config.bruteforcedeffender.time
+        allowedNumberOfAttempts = grailsApplication.config.bruteforcedefender.allowedNumberOfAttempts
+        Integer time = grailsApplication.config.bruteforcedefender.time
 
         log.debug "account block configured for $time minutes"
         log.debug "allowed number of attempts configured for $allowedNumberOfAttempts minutes"
