@@ -7,7 +7,7 @@ class BruteforceDefenderGrailsPlugin {
     def title = "Bruteforce Defender Plugin"
     def author = "Grygoriy Mykhalyuno"
     def authorEmail = "email@grygoriy.com"
-    def description = 'Enables blocking user account after few attampts with incorect credentials. Preventing brute-force attacks'
+    def description = 'Enables blocking user account after few attampts with incorect credentials. Preventing brute-force attacks. Plugin works on top of Spring Security Plugin'
     def documentation = "https://github.com/grygoriy/bruteforcedefender"
 
     def license = "APACHE"
