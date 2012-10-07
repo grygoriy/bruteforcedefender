@@ -1,13 +1,14 @@
 package com.grygoriy.bruteforcedeffender
 
+import java.util.concurrent.TimeUnit
+
+import javax.annotation.PostConstruct
+
+import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+
 import com.google.common.cache.CacheBuilder
 import com.google.common.cache.CacheLoader
 import com.google.common.cache.LoadingCache
-
-import java.util.concurrent.TimeUnit
-import javax.annotation.PostConstruct
-import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
-import org.springframework.security.core.userdetails.UsernameNotFoundException
 
 class LoginAttemptCacheService {
 
@@ -15,10 +16,9 @@ class LoginAttemptCacheService {
 
     def userDetailsService
 
-    private LoadingCache<String, Integer> attempts;
+    private LoadingCache<String, Integer> attempts
 
     private Integer allowedNumberOfAttempts
-
 
     @PostConstruct
     void init() {
@@ -30,7 +30,7 @@ class LoginAttemptCacheService {
 
         attempts = CacheBuilder.newBuilder()
                                     .expireAfterWrite(time, TimeUnit.MINUTES)
-                                    .build({0} as CacheLoader);
+                                    .build({0} as CacheLoader)
     }
 
     /**
@@ -39,7 +39,7 @@ class LoginAttemptCacheService {
      * @return
      */
     def failLogin(String login) {
-        def numberOfAttempts = attempts.get(login)
+        int numberOfAttempts = attempts.get(login)
         log.debug "fail login $login previous number for attempts $numberOfAttempts"
         numberOfAttempts++
 
@@ -70,14 +70,13 @@ class LoginAttemptCacheService {
         def user = loadUser(login)
         if (user) {
             def conf = SpringSecurityUtils.securityConfig
-            def accountLockedPropertyName = conf.userLookup.accountLockedPropertyName
-            user."$accountLockedPropertyName" = true;
+            String accountLockedPropertyName = conf.userLookup.accountLockedPropertyName
+            user."$accountLockedPropertyName" = true
             user.save(flush: true)
         }
     }
 
-
-    private def loadUser(String login) {
+    private loadUser(String login) {
         def conf = SpringSecurityUtils.securityConfig
         String userClassName = conf.userLookup.userDomainClassName
         def dc = grailsApplication.getDomainClass(userClassName)
