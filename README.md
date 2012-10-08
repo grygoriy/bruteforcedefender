@@ -2,7 +2,7 @@ Brute-force Defender Plugin Info
 ================================
 
 ##Desciption
-Grails plugin enables blocking user account after few attampts with incorect credentials. Preventing brute-force attacks. Plugin works on top of Spring Security plugin
+Plugin adds functionality of blocking user account after a number of falied login, thus countering brute-force attacks. Plugin is working on top of configured Spring Security Core plugin with its UserDetails.
 
 ## Instalation
 ### dependencies
