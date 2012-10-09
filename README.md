@@ -1,20 +1,20 @@
 Brute-force Defender Plugin Info
 ================================
 
-##Desciption
-Plugin adds functionality of blocking user account after a number of falied login, thus countering brute-force attacks. Plugin is working on top of configured Spring Security Core plugin with its UserDetails.
+##Description
+Plugin adds functionality of blocking user account after a configured number of failed login, thus countering brute-force attacks. Plugin is working on top of configured Spring Security Core plugin with its UserDetails.
 
-## Instalation
-### dependencies
-- plugi
-### install from prebuilded
-- goto https://github.com/grygoriy/bruteforcedefender/downloads
-- dowload latest version
+## Installation
+### Dependencies
+- plugin depents on Spring Security Core plugin
+### install from pre-compliled
+- go to https://github.com/grygoriy/bruteforcedefender/downloads
+- download latest version
 - use `grails install-plugin <path to file>`
 
 ### build from sources
 - clone repo `git clone https://github.com/grygoriy/bruteforcedefender.git`
-- build plugin `grails package-pllugin`
+- build plugin `grails package-plugin`
 - you should see plugin zip file in plugin directory
 - use `grails install-plugin <path to file>`
 
