@@ -7,12 +7,17 @@ Plugin adds functionality of blocking user account after a configured number of 
 ## Installation
 ### Dependencies
 - plugin depents on Spring Security Core plugin
-### install from pre-compliled
+
+### From grails plugin reposity
+* follow instrations here grails.org/plugin/bruteforce-defender
+* add `compile ":bruteforce-defender:1.0"` to `BuildConfig.groovy`
+
+### Install from pre-compliled
 - go to https://github.com/grygoriy/bruteforcedefender/downloads
 - download latest version
 - use `grails install-plugin <path to file>`
 
-### build from sources
+### Build from sources
 - clone repo `git clone https://github.com/grygoriy/bruteforcedefender.git`
 - build plugin `grails package-plugin`
 - you should see plugin zip file in plugin directory
