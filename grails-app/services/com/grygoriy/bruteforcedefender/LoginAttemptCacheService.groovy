@@ -41,7 +41,7 @@ class LoginAttemptCacheService {
         log.debug "fail login $login previous number for attempts $numberOfAttempts"
         numberOfAttempts++
 
-        if (numberOfAttempts > allowedNumberOfAttempts) {
+        if (numberOfAttempts >= allowedNumberOfAttempts) {
             blockUser(login)
             attempts.invalidate(login)
         } else {
