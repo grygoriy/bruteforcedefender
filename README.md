@@ -33,7 +33,7 @@ bruteforcedefender {
 ```
 
 ## Logging
-To enable login add next lines in your `Config.groovy`
+To enable logging, add next lines in your `Config.groovy`
 ```groovy
 log4j = {
     ....
