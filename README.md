@@ -50,3 +50,7 @@ Grygoriy Mykhalyuno
 www.grygoriy.com
 
 email@grygoriy.com
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/grygoriy/bruteforcedefender/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
