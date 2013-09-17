@@ -26,11 +26,15 @@ Plugin adds functionality of blocking user account after a configured number of 
 ## Configuration
 Add to your `Config.groovy` next lines
 ```groovy
+grails.plugins.springsecurity.useSecurityEventListener = true
+
 bruteforcedefender {
     time = 5
     allowedNumberOfAttempts = 3
 }
+
 ```
+
 
 ## Logging
 To enable logging, add next lines in your `Config.groovy`
