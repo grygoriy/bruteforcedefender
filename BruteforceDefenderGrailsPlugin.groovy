@@ -2,7 +2,7 @@ import com.grygoriy.bruteforcedefender.AuthenticationFailureListener
 import com.grygoriy.bruteforcedefender.AuthenticationSuccessEventListener
 
 class BruteforceDefenderGrailsPlugin {
-    def version = "1.0"
+    def version = "1.1"
     def grailsVersion = "2.0 > *"
     def title = "Bruteforce Defender Plugin"
     def author = "Grygoriy Mykhalyuno"
