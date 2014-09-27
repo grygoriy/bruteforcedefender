@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit
 
 import javax.annotation.PostConstruct
 
-import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import grails.plugin.springsecurity.SpringSecurityUtils
 
 import com.google.common.cache.CacheBuilder
 import com.google.common.cache.CacheLoader
