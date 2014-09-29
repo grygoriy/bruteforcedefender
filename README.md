@@ -10,7 +10,7 @@ Plugin adds functionality of blocking user account after a configured number of 
 
 ### From grails plugin reposity
 * follow instrations here grails.org/plugin/bruteforce-defender
-* add `compile ":bruteforce-defender:1.0"` to `BuildConfig.groovy`
+* add `compile ":bruteforce-defender:1.1"` to `BuildConfig.groovy`
 
 ### Install from pre-compliled
 - go to https://github.com/grygoriy/bruteforcedefender/downloads
@@ -50,7 +50,7 @@ log4j = {
 ```
 ## Demo application
 Here is demo application that you can just run and look how it is working.
-https://github.com/stokito/s2-brutforce-example. 
+https://github.com/stokito/s2-brutforce-example.
 Thanks to @stokito
 
 
@@ -62,4 +62,3 @@ email@grygoriy.com
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/grygoriy/bruteforcedefender/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

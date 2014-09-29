@@ -11,6 +11,7 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenLocal()
         mavenCentral()
+        grailsRepo "http://grails.org/plugins"
     }
 
     dependencies {
