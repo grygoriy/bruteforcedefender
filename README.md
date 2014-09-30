@@ -50,7 +50,7 @@ log4j = {
 ```
 ## Demo application
 Here is demo application that you can just run and look how it is working.
-https://github.com/stokito/s2-brutforce-example. 
+https://github.com/grygoriy/s2-brutforce-example
 Thanks to @stokito
 
 
