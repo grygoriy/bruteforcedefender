@@ -68,8 +68,8 @@ class LoginAttemptCacheService {
         def user = loadUser(login)
         if (user) {
             def conf = SpringSecurityUtils.securityConfig
-            String accountLockedPropertyName = conf.userLookup.accountLockedPropertyName
-            user."$accountLockedPropertyName" = true
+            String enabledPropertyName = conf.userLookup.enabledPropertyName
+            user."$enabledPropertyName" = false
             user.save(flush: true)
         }
     }

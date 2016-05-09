@@ -23,6 +23,14 @@ Plugin adds functionality of blocking user account after a configured number of 
 - you should see plugin zip file in plugin directory
 - use `grails install-plugin <path to file>`
 
+WORKAROUND for grails >= 2.4.3
+https://objectpartners.com/2013/02/13/grails-2-2-publishing-your-plugins-as-maven-artifacts-to-resolve-dependency-resolution-issues/
+
+- grails compile
+- grails maven-install
+
+
+
 ## Configuration
 Add to your `Config.groovy` next lines
 ```groovy
@@ -34,6 +42,11 @@ bruteforcedefender {
 }
 
 ```
+
+Since Grails 2.4.4
+
+grails.plugin.springsecurity.useSecurityEventListener = true
+
 
 
 ## Logging

@@ -22,3 +22,5 @@ Thumbs.db
 
 Screenshot*.png
 CodeNarcReport.html
+*.zip
+*.sha1
